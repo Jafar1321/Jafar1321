@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MGIT Chatbot (Prototype)</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="assets/logo.png" alt="MGIT — Mahatma Gandhi Institute of Technology logo" class="logo" />
+    <h1>MGIT Chatbot (Prototype)</h1>
+  </header>
+
+  <!-- Main Chat Area -->
+  <main class="chat-container">
+    <section id="chat-window" class="chat-window" role="log" aria-live="polite">
+      <div class="bot-message">
+        Hello! 👋 I’m the MGIT Assistant. How can I help you today?
+      </div>
+    </section>
+
+    <!-- Input form -->
+    <form id="chat-form" class="chat-form">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Type your question..."
+        autocomplete="off"
+        required
+      />
+      <button id="send-btn" type="submit">Send</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Prototype · FAQ-based · No personal data stored
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

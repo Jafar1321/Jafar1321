@@ -1,0 +1,156 @@
+/* ===== MGIT Chatbot — Prototype Styles ===== */
+:root{
+  --mgit-navy: #1d2a57;     /* header, buttons */
+  --mgit-gold: #b57f1b;     /* accents */
+  --bg: #f6f7fb;            /* app background */
+  --card: #ffffff;          /* surfaces */
+  --text: #1c1f23;          /* primary text */
+  --muted: #646b75;         /* secondary text */
+  --bot: #eef2ff;           /* bot bubble */
+  --user: #e7f7ee;          /* user bubble */
+  --border: #e4e7ec;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% -10%, #eef1ff 0, #f7f8ff 35%, var(--bg) 70%);
+}
+
+/* Header */
+.header{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo{
+  height: 48px;
+  width: auto;
+}
+.header h1{
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--mgit-navy);
+}
+
+/* Layout */
+.chat-container{
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 0 16px 18px;
+}
+.chat-window{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: var(--shadow);
+  padding: 14px;
+  min-height: 58vh;
+  max-height: 70vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Messages */
+.bot-message,
+.user-message{
+  width: fit-content;
+  max-width: min(84ch, 95%);
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  margin: 8px 0;
+  word-wrap: break-word;
+}
+
+.bot-message{
+  background: var(--bot);
+  border: 1px solid #dfe4ff;
+  color: #0f1b4d;
+}
+.user-message{
+  background: var(--user);
+  border: 1px solid #cfeedd;
+  color: #0f3320;
+  margin-left: auto;             /* right align */
+}
+
+/* Input form */
+.chat-form{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-top: 12px;
+  position: sticky;
+  bottom: 0;
+  padding-top: 12px;
+  background: linear-gradient(180deg, rgba(246,247,251,0) 0%, var(--bg) 40%);
+}
+#user-input{
+  height: 46px;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 0 14px;
+  background: #fff;
+  color: var(--text);
+  outline: none;
+}
+#user-input::placeholder{ color: var(--muted); }
+#user-input:focus{
+  border-color: var(--mgit-navy);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mgit-navy) 15%, transparent);
+}
+
+#send-btn{
+  height: 46px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: calc(var(--radius) + 6px);
+  background: var(--mgit-navy);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .05s ease;
+}
+#send-btn:hover{ filter: brightness(1.05); }
+#send-btn:active{ transform: translateY(1px); }
+#send-btn:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--mgit-gold) 35%, transparent);
+  outline-offset: 2px;
+}
+
+/* Footer */
+.footer{
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+  padding: 12px 18px 32px;
+}
+
+/* Utility spacing so first/last messages don't stick to edges */
+.chat-window > *:first-child { margin-top: 2px; }
+.chat-window > *:last-child  { margin-bottom: 6px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .chat-window{ scroll-behavior: auto; }
+  #send-btn{ transition: none; }
+}
+
+/* Narrow screens */
+@media (max-width: 520px){
+  .header h1{ font-size: 1rem; }
+  .logo{ height: 40px; }
+  .chat-window{ min-height: 60vh; }
+}

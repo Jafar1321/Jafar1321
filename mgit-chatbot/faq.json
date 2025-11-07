@@ -1,0 +1,37 @@
+[
+{
+"question": "What programs does MGIT offer?",
+"answer": "MGIT offers undergraduate and postgraduate programs in engineering and technology across multiple departments such as CSE, ECE, EEE, Mechanical, Civil, IT, and more. Please refer to the Departments page for the full list.",
+"keywords": ["programs", "courses", "departments", "ug", "pg", "btech", "mtech"]
+},
+{
+"question": "How do I apply for admissions?",
+"answer": "Admissions typically follow state entrance examinations and counselling procedures. Please check the official Admissions page for current eligibility, timelines, and application steps.",
+"keywords": ["admissions", "apply", "application", "eligibility", "counselling", "entrance"]
+},
+{
+"question": "What is the fee structure?",
+"answer": "Fee structures vary by program and category. Please see the Fees/Finance section on the MGIT website for the latest official details.",
+"keywords": ["tuition", "fees", "fee", "finance", "structure"]
+},
+{
+"question": "Does MGIT provide hostel facilities?",
+"answer": "Information about hostel/boarding, availability, and application procedure is provided on the Facilities or Student Services section of the MGIT website.",
+"keywords": ["hostel", "accommodation", "boarding", "residence", "mess"]
+},
+{
+"question": "What about placements and recruiters?",
+"answer": "MGIT maintains a Training & Placement cell. Placement statistics, recruiter lists, and training details are published on the Placements section of the website.",
+"keywords": ["placements", "recruiters", "career", "package", "T&P", "internship"]
+},
+{
+"question": "Where is the campus located?",
+"answer": "The campus address and an interactive map link are available on the Contact page of the MGIT website.",
+"keywords": ["location", "address", "map", "contact", "directions"]
+},
+{
+"question": "How can I contact MGIT?",
+"answer": "Please use the Contact page for phone numbers, email addresses, and office hours for various departments and administrative offices.",
+"keywords": ["contact", "email", "phone", "office hours"]
+}
+]
